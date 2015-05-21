@@ -15,3 +15,7 @@ or wifite -dict rockyou.txt - automatically does the same we've seen earlier.
 >reaver -i mon0 -b
 or another utility
 >wash -i mon0 -C
+
+//Disable monitor mode airmon-ng dekstop (?)
+//More dictionaries in kali: ls -la /usr/share/wordlists/
+On site routerpwn.com you can find exploits on different rotuers.
